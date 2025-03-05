@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Random</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #555;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>¡Bienvenido a la página random!</h1>
+    <p>Haz clic en el botón para mostrar un mensaje aleatorio.</p>
+    <button onclick="mostrarMensaje()">Mostrar Mensaje</button>
+    <p id="mensaje"></p>
+
+    <script>
+        function mostrarMensaje() {
+            const mensajes = [
+                "Hoy es un buen día para aprender algo nuevo.",
+                "Nunca dejes de soñar.",
+                "La paciencia es la clave del éxito.",
+                "Cree en ti mismo y todo será posible.",
+                "El esfuerzo de hoy es el éxito de mañana."
+            ];
+            const mensajeRandom = mensajes[Math.floor(Math.random() * mensajes.length)];
+            document.getElementById("mensaje").textContent = mensajeRandom;
+        }
+    </script>
+</body>
+</html>
